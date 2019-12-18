@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AlirezaGit...</title>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+
+<div class="mypanel"></div>
+
+<script>
+
+var getJSON = function(url, callback) {
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    
+    xhr.onload = function() {
+    
+        var status = xhr.status;
+        
+        if (status == 200) {
+            callback(null, xhr.response);
+        } else {
+            callback(status);
+        }
+    };
+    
+    xhr.send();
+};
+
+getJSON('https://spreadsheets.google.com/feeds/cells/14TYS9UBM5PETa2Y3_l68nwJZTjxjJkg9hMnOiizN3Gg/omflyq1/public/values?alt=json',  function(err, data) {
+    
+    if (err != null) {
+        console.error(err);
+    } else {
+        
+        var text = `Title: ${data.version}
+Content: ${data[0].entry[0].id}
+Entry: ${data.result}`
+    
+        $(".mypanel").html(text);
+    }
+});
+
+</script>
+
+</body>
+
+</html>
