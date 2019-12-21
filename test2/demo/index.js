@@ -1,4 +1,4 @@
-import GSheetProcessor from '../src/gsheetsprocessor.js'
+import GSheetProcessor from 'https://alirezagit.ir/test2/src/gsheetsprocessor.js'
 
 // test Sheet url
 const demoSheetURL = 'https://docs.google.com/spreadsheets/d/1-CmQumuz5ZiOvINhphEMgfplrJacQhD623RROcOBTAg/edit?usp=sharing';
