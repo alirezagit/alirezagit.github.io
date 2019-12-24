@@ -22,11 +22,11 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link href="assets/fonts/style.css" rel="stylesheet">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
+  <link rel="stylesheet" href="https://github.com/loadingio/ldbutton/releases/latest/download/ldbtn.min.css">
   
   
 </head>
-<body>
+<body onload="GFG_Fun()">
   <section class="menu cid-rE1y2lSwwv" once="menu" id="menu1-h">
 
     
@@ -93,6 +93,7 @@
 	<form id="register-form" align="right" dir="rtl" lang="fa" class="needs-validation" novalidate>
 	<div class="form-row">
     <div class="col-md-4 mb-3 md-form">
+	  <input name="entry.1642221268" type="hidden" class="form-control" id="userno" placeholder="" value="">
       <label align="center" for="validationTooltip01">نام و نام خانوادگی</label>
       <input name="entry.1407109593" type="text" dir="rtl" class="form-control" id="validationTooltip01" placeholder="" value=""
         required>
@@ -102,8 +103,7 @@
     </div>
     <div class="col-md-4 mb-3">
       <label align="right" for="validationTooltip02">تلفن</label>
-      <input name="entry.1248023699" type="number" dir="rtl" class="form-control" id="validationTooltip02" placeholder="ترجیحا با کد شهر" value="Otto"
-        required>
+      <input name="entry.1248023699" type="number" dir="rtl" class="form-control" id="validationTooltip02" placeholder="ترجیحا با کد شهر" required>
       <div class="invalid-tooltip">
         لطفا تلفن خود را وارد کنید
       </div>
@@ -111,8 +111,7 @@
     <div class="col-md-4 mb-3">
       <label for="validationTooltipUsername">ایمیل</label>
       <div class="input-group">
-        <input name="entry.1553966662" type="email" dir="rtl" class="form-control" id="validationTooltipUsername" placeholder=""
-          aria-describedby="validationTooltipUsernamePrepend" required>
+        <input name="entry.1553966662" type="email" dir="rtl" class="form-control" id="validationTooltipUsername" placeholder="" required>
         <div class="invalid-tooltip">
           لطفا ایمیل خود را وارد کنید
         </div>
@@ -154,7 +153,7 @@
   <button class="btn btn-sm btn-primary display-5" style="font-size: 20px;" type="submit"><span class="sr-only">Loading...</span>ثبت نام
   <span>&nbsp;</span>
   <span>&nbsp;</span>
-  <span class="spinner-border spinner-border-md" role="status" aria-hidden="true"></span>
+  <span id="loader" style="display.none" class="spinner-border spinner-border-md" role="status" aria-hidden="true"></span>
   <span class="sr-only">Loading...</span>
   </button>
 </form>
@@ -252,7 +251,9 @@
   <script src="assets/theme/js/script.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js?explicit&hl=fa"></script>
+  <script src="https://spreadsheets.google.com/feeds/cells/14TYS9UBM5PETa2Y3_l68nwJZTjxjJkg9hMnOiizN3Gg/omflyq1/public/values?alt=json-in-script&callback=sheetLoaded"></script>
   <script src="assets/valid.js"></script>
+  <script src="assets/data.js"></script>
   
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
   </body>
