@@ -2,8 +2,8 @@ $('#submit_btn').on('click', function(event) {
     event.preventDefault();
     var str = $('#userid').val();
 $.ajax({
-   url: "https://docs.google.com/spreadsheets/d/14TYS9UBM5PETa2Y3_l68nwJZTjxjJkg9hMnOiizN3Gg/gviz/tq?tqx=out:html&tq=SELECT+B,+C,+D,+F,+G,+H+WHERE+H+CONTAINS" + "+" + "'" + str + "'",
-   context: document.tr
+   url: "https://docs.google.com/spreadsheets/d/14TYS9UBM5PETa2Y3_l68nwJZTjxjJkg9hMnOiizN3Gg/gviz/tq?tqx=out:html&tq=SELECT+B,+C,+D,+F,+G,+H+WHERE+H=" + "+" + "'" + str + "'",
+   context: document.body
    }).done(function(data) {
       $('#new-projects').append(data);
     	$('table').prop('id', 'userdata');
