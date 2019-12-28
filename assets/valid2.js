@@ -1,3 +1,3 @@
-$('#inputname').on('change', function(event) {
+function btnclick() {
 	document.getElementById("nextbtn").disabled = false;
-});
+}
