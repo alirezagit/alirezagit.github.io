@@ -3,5 +3,6 @@ function btnclick() {
 });
 
 $('#inputname').on('change', function(event) {
+	event.preventDefault();
 	btnclick()
 });
