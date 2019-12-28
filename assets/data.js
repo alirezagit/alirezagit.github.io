@@ -13,7 +13,7 @@ $.ajax({
       $('#inputpost').val( $('#userdata').find('td:nth-child(4)').eq(1).html() );
       $('#inputcity').val( $('#userdata').find('td:nth-child(5)').eq(1).html() );
       $('#userid').val( $('#userdata').find('td:nth-child(6)').eq(1).html() );
-      $('#nextbtn').prop('disabled', 'false');
+      $('#nextbtn').removeAttr('disabled');
   });
 });
 
