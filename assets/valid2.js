@@ -1,3 +1,3 @@
 $('#inputname').on('change', function() {
-	$("nextbtn").removeAttr('disabled');
+	$("nextbtn").removeAttr("disabled");
 });
