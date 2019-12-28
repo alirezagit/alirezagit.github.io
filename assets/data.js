@@ -21,3 +21,9 @@ function GFG_Fun() {
 document.getElementById('userno').value = 
 Math.random().toString(36).slice(2); 
 }
+
+$(document).ready(function(){
+  $('#inputname').change(function(){
+    $('#nextbtn').removeAttr('disabled');
+  });
+});
