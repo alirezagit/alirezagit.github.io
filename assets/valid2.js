@@ -1,3 +1,3 @@
-$('#inputname').on('change', function() {
-	document.getElementById("nextbtn").disabled = false;
+$('#inputname').on('change', function(event) {
+	$("nextbtn").prop('disabled', false);
 });
