@@ -1,3 +1,7 @@
-$('#inputname').on('change', function() {
-	$("nextbtn").removeAttr("disabled");
+function btnclick() {
+	document.getElementById("nextbtn").disabled = false;
+});
+
+$('#inputname').on('change', function(event) {
+	btnclick()
 });
