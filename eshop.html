@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link href="assets/fonts/style.css" rel="stylesheet">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="https://github.com/loadingio/ldbutton/releases/latest/download/ldbtn.min.css">
   
   
 </head>
@@ -145,16 +146,16 @@
 
 <div id="modal2" class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
-    <div align="center" class="modal-content">
+    <div id="user-user" align="center" class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="myLargeModalLabel2">ثبت نام در یوتاب</h4>
+        <h4 class="modal-title" id="myLargeModalLabel2">ثبت سفارش در یوتاب</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
 		<p class="mbr-text align-center pb-3 mbr-fonts-style display-5">خواهشمندیم فرم ثبت نامی زیر را به دقت تکمیل فرمایید و در انتها دکمه ارسال را کلیک نمایید. اطلاعات شما در سامانه یوتاب ثبت شده و کد کاربری با ایمیل برای شما ارسال خواهد گردید. با تشکر</p>
 	<div class="modal-body">
-   	<form id="order-form" dir="rtl" class="needs-validation" novalidate>
+   	<form id="order-form" dir="rtl" class="needs-validation2" novalidate>
     <div class="col-md-4 mb-3 md-form align-items-center">
       <label for="inputid">کد کاربری شما</label>
       <input name="inputid" type="text" class="form-control" id="inputid" required>
@@ -172,14 +173,12 @@
 		<input type="hidden" class="form-control" id="userid">
     </div>
     </div>
-	<div align="center" class="col-md-3 mb-3">
-	<p>&nbsp;</p>
+	<div id="btn-btn" align="center" class="col-md-3 mb-3">
 	<button id="nextbtn" class="btn btn-sm btn-primary display-5" style="font-size: 20px;" type="submit">ادامه</button>
-	<div class="help-block with-errors"></div>
 	</div>
 </form>
    <div id="user-order" class="modal-body" hidden="true">
-	<form id="user-form" align="right" dir="rtl" lang="fa" class="needs-validation2" novalidate>
+	<form id="user-form" align="right" dir="rtl" lang="fa" class="needs-validation3" novalidate>
 	<div class="form-row">
     <div class="col-md-4 mb-3 md-form">
       <label align="center" for="validationTooltip01">نام و نام خانوادگی</label>
@@ -322,6 +321,7 @@
   <script src="assets/formoid/formoid.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js?explicit&hl=fa"></script>
   <script src="assets/valid.js"></script>
+  <script src="assets/valid2.js"></script>
   <script src="assets/data.js"></script>
   
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
