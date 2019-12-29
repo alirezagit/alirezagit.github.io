@@ -1,4 +1,4 @@
- $('#inputid').on('keyup', function(event) {
+$('#inputid').on('keyup', function(event) {
 	event.preventDefault();
     var str = $('#inputid').val();
 $.ajax({
@@ -13,9 +13,16 @@ $.ajax({
       $('#inputpost').val( $('#userdata').find('td:nth-child(4)').eq(1).html() );
       $('#inputcity').val( $('#userdata').find('td:nth-child(5)').eq(1).html() );
       $('#userid').val( $('#userdata').find('td:nth-child(6)').eq(1).html() );
-      $('#nextbtn').removeAttr('disabled');
   });
 });
+
+$('#inputname').on('change', function(event) {
+	if ($("#inputname").val() = '') {
+
+}
+	else
+	$('#nextbtn').removeAttr('disabled');
+});	  
 
 function makeid(length) { 
 var result = '';
