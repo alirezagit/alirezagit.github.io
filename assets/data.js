@@ -1,4 +1,4 @@
-$('#inputid').on('keyup', function(event) {
+ $('#inputid').on('keyup', function(event) {
 	event.preventDefault();
     var str = $('#inputid').val();
 $.ajax({
@@ -17,7 +17,13 @@ $.ajax({
   });
 });
 
-function GFG_Fun() { 
-document.getElementById('userno').value = 
-Math.random().toString(36).slice(2); 
+function makeid(length) { 
+var result = '';
+var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+var charactersLength = characters.length;
+for ( var i = 0; i < length; i++ ) {
+	result += characters.charAt(Math.floor(Math.random()*
+	charactersLength));
+}
+document.getElementById('userno').value = result;
 }
