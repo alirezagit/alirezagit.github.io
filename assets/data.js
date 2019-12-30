@@ -16,11 +16,6 @@ $.ajax({
   });
 });
 
-function check() {
-      alert("Input box changed");
-      // Things to do when the textbox changes
-}
-
 function makeid(length) { 
 var result = '';
 var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
