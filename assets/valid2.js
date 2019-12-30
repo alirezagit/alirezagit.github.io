@@ -20,7 +20,6 @@ if (form.checkValidity() === true) {
 	event.stopPropagation();	
 	}
 }
-form.classList.add('was-validated');
 }, false);
 });
 }, false);
