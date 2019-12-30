@@ -15,6 +15,9 @@ if (form.checkValidity() === true) {
 	  $('#order-form').attr('hidden', 'true');
 	  $('#btn-btn').attr('hidden', 'true');
       	  $('#user-order').removeAttr('hidden');
+	else
+	event.preventDefault();
+	event.stopPropagation();	
 	}
 }
 form.classList.add('was-validated');
