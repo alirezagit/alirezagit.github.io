@@ -14,7 +14,7 @@ if (form.checkValidity() === true) {
 	event.preventDefault(); // to prevent default page reloading
 	  $('#order-form').attr('hidden', 'true');
 	  $('#btn-btn').attr('hidden', 'true');
-      	  $('#user-order').removeAttr('hidden');
+      	  $('#user-order').removeAttr('hidden')
 	}
 }
 form.classList.add('was-validated');
