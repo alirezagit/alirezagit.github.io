@@ -10,16 +10,12 @@ event.preventDefault();
 event.stopPropagation();
 }
 if (form.checkValidity() === true) {
-	if ($("#inputname").val() !== '') {
 	event.preventDefault(); // to prevent default page reloading
 	  $('#order-form').attr('hidden', 'true');
 	  $('#btn-btn').attr('hidden', 'true');
       	  $('#user-order').removeAttr('hidden');
-	else
-	event.preventDefault();
-	event.stopPropagation();	
-	}
 }
+form.classList.add('was-validated');
 }, false);
 });
 }, false);
