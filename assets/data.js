@@ -16,7 +16,7 @@ $.ajax({
   });
 });
 
-$('#inputname').on('load',function(e){
+$('#inputname').val('change',function(e){
     alert('Changed!')
 });
 
