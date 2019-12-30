@@ -16,7 +16,7 @@ $.ajax({
   });
 });
 
-function check(){
+function check() {
       alert("Input box changed");
       // Things to do when the textbox changes
 }
