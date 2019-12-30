@@ -16,7 +16,7 @@ $.ajax({
   });
 });
 
-$('#inputname').val('change',function(e){
+$('#inputname').val('paste',function(e){
     alert('Changed!')
 });
 
