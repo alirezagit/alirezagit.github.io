@@ -16,9 +16,10 @@ $.ajax({
   });
 });
 
-$('#inputname').on('input',function(e){
-    alert('Changed!')
-});
+function check(){
+      alert("Input box changed");
+      // Things to do when the textbox changes
+}
 
 function makeid(length) { 
 var result = '';
