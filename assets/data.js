@@ -16,13 +16,9 @@ $.ajax({
   });
 });
 
-$('#inputname').on('change', function(event) {
-	if ($("#inputname").val() = '') {
-
-}
-	else
-	$('#nextbtn').removeAttr('disabled');
-});	  
+$("#inputname").change(function() {
+  alert( "Handler for .change() called." );
+});
 
 function makeid(length) { 
 var result = '';
