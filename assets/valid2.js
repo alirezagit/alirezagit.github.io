@@ -6,5 +6,6 @@ $("#order-form").on("submit",function(e) {
     } else
     $('#order-form').attr('hidden', 'true');
     $('#btn-btn').attr('hidden', 'true');
+    $('#username').attr('hidden', 'true');
     $('#user-order').removeAttr('hidden');
 });
