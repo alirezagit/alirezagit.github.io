@@ -14,7 +14,7 @@ $.ajax({
       $('#inputcity').val( $('#userdata').find('td:nth-child(5)').eq(1).html() );
       $('#userid').val( $('#userdata').find('td:nth-child(6)').eq(1).html() );
       $('#username').html( "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + $('#userdata').find('td:nth-child(1)').eq(1).html() );
-  })
+  });
 });
 
 function makeid(length) { 
