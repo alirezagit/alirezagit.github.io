@@ -23,6 +23,7 @@
   <link href="assets/fonts/style.css" rel="stylesheet">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
+  
 </head>
 <body onload="makeid(10)">
   <section class="menu cid-rE1y2lSwwv" once="menu" id="menu1-h">
@@ -130,12 +131,7 @@
 	</div>
   </div>
         <p>&nbsp;</p>
-  <button class="btn btn-sm btn-primary display-5" style="font-size: 20px;" type="submit"><span class="sr-only">Loading...</span>ثبت نام
- <!--- <span>&nbsp;</span>
-  <span>&nbsp;</span>
-  <span id="loader" style="display.none" class="spinner-border spinner-border-md" role="status" aria-hidden="true"></span>
-  <span class="sr-only">Loading...</span>-->
-  </button>
+  <button class="btn btn-sm btn-primary display-5" style="font-size: 20px;" type="submit"><span class="sr-only"></span>ثبت نام</button>
 </form>
     </div>
     </div>
@@ -151,23 +147,15 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-		<p class="mbr-text align-center pb-3 mbr-fonts-style display-5">مشتری گرامی، به منظور سهولت در ثبت سفارش مشتریان محترم اطلاعات فردی و پستی مشتریان بطور خودکار توسط سامانه وارد می شود. تنها کافیست سایر مراحل سفارش را با دقت طی نموده و در انتها آن را تایید نهایی نمایید. با تشکر</p>
+		<p class="mbr-text align-center pb-3 mbr-fonts-style display-5">کاربر گرامی، به منظور سهولت در ثبت سفارش مشتریان محترم اطلاعات فردی و پستی مشتریان بطور خودکار توسط سامانه وارد می شود. تنها کافیست سایر مراحل سفارش را با دقت طی نموده و در انتها آن را تایید نهایی نمایید. با تشکر</p>
 	<div class="modal-body">
-   	<form id="order-form" dir="rtl">
+   	<form id="order-form" class="needs-validation2" novalidate>
     <div class="col-md-4 mb-3 md-form align-items-center">
       <label class="mbr-text align-center pb-3 mbr-fonts-style display-7" for="inputid">کد کاربری شما</label>
-      <input name="inputid" type="text" class="form-control" id="inputid">
+      <input name="inputid" type="text" class="form-control" id="inputid" required>
 	</div>
     <div class="col-md-4 mb-3 md-form align-items-center">
-	    	<input type="hidden" class="form-control" id="inputname">
-		<input type="hidden" class="form-control" id="inputphone">
-		<input type="hidden" class="form-control" id="inputemail">
-		<input type="hidden" class="form-control" id="inputpost">
-		<input type="hidden" class="form-control" id="inputcity">
-		<input type="hidden" class="form-control" id="userid">
-    </div>
-    <div class="col-md-4 mb-3 md-form align-items-center">
-      	<label id="username" class="mbr-text align-center pb-3 mbr-fonts-style display-7" for="inputid"></label>
+      <label id="username" class="mbr-text align-center pb-3 mbr-fonts-style display-7" for="inputid"></label>
     </div>
     </div>
 	<div id="btn-btn" align="center" class="col-md-3 mb-3">
@@ -175,54 +163,77 @@
 	</div>
 </form>
    <div id="user-order" class="modal-body" hidden="true">
-<form id="user-form" align="right" dir="rtl" lang="fa" class="needs-validation3" novalidate>
+	<form id="user-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSezn4rR4AZeGPekcqSM9yJTPMzm0DjJhiKPm50cmDjqPZ_xUg/formResponse" method="POST" align="right" dir="rtl" lang="fa" class="needs-validation3" novalidate>
+	    <div class="col-md-4 mb-3 md-form align-items-center">
+	    <input name="entry.889273405" type="hidden" class="form-control" id="inputname">
+		<input name="entry.1036496029" type="hidden" class="form-control" id="inputphone">
+		<input name="entry.851086785" type="hidden" class="form-control" id="inputemail">
+		<input name="entry.1051800841" type="hidden" class="form-control" id="inputaddr">
+		<input name="entry.1676873419" type="hidden" class="form-control" id="inputpost">
+		<input name="entry.1660789366" type="hidden" class="form-control" id="inputcity">
+		<input name="entry.1704478995" type="hidden" class="form-control" id="userid">
+    </div>
 	<div class="form-row">
     <div class="col-md-4 mb-3 md-form">
-    <label for="exampleFormControlSelect1">نوع محصول</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <label for="FormControlSelect1">نوع محصول</label>
+    <select name="entry.1555569515" class="form-control" id="FormControlSelect1" onChange="myFunction()">
       <option>پنل آسمان مجازی</option>
       <option>پنل سقفی سه بعدی</option>
       <option>تابلوی دیواری شاسی</option>
     </select>
   </div>
      <div class="col-md-4 mb-3 md-form">
-    <label for="exampleFormControlSelect1">سایز محصول</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <label for="FormControlSelect2">سایز محصول</label>
+    <select name="entry.1705255299" class="form-control" id="FormControlSelect2">
       <option>استاندارد</option>
       <option>غیر استاندارد</option>
     </select>
   </div>
     <div class="col-md-4 mb-3">
-      <label align="right" for="validationTooltip02">تعداد</label>
-      <input name="" type="number" dir="rtl" class="form-control" id="validationTooltip02" placeholder="" required>
+      <label align="right" for="validationTooltip07">تعداد</label>
+      <input name="" type="number" dir="rtl" class="form-control" id="validationTooltip07" placeholder="" required>
     </div>
 	</div>
 	<div class="form-row">
+	<div class="col-md-3 mb-3 md-form">
+    <label for="FormControlSelect3">تصویر محصول</label>
+    <select name="entry.1509686015" class="form-control" id="FormControlSelect3" onChange="myFunction2()">
+      <option>از آلبوم یوتاب</option>
+      <option>دلخواه مشتری</option>
+    </select>
+  </div>
     <div class="col-md-3 mb-3">
-      <label for="validationTooltip04">کد محصول</label>
-      <input name="" type="text" dir="rtl" class="form-control" id="validationTooltip04" placeholder="موجود در آلبوم محصول" required>
+      <label for="validationTooltip08">کد محصول</label>
+      <input name="entry.568773841" type="text" dir="rtl" class="form-control" id="validationTooltip08" placeholder="موجود در آلبوم محصول" required>
     </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationTooltip05">کد سایز محصول</label>
-      <input name="" type="text" dir="rtl" class="form-control" id="validationTooltip05" placeholder="موجود در آلبوم محصول" required>
+	<div id="prosize" class="col-md-3 mb-3">
+      <label for="validationTooltip09">کد سایز محصول</label>
+      <input name="entry.441843581" type="text" dir="rtl" class="form-control" id="validationTooltip09" placeholder="موجود در آلبوم محصول" disabled="true" required>
     </div>
-	<div class="col-md-6 mb-3 md-form">
-    <label for="exampleFormControlSelect1">نحوه دریافت محصول</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>دریافت در محل شرکت</option>
-      <option>ارسال به آدرس مشتری</option>
+	<div id="prodepth" class="col-md-3 mb-3 md-form">
+    <label for="FormControlSelect4">ضخامت محصول</label>
+    <select name="entry.1854803213" class="form-control" id="FormControlSelect4">
+      <option>دو میلیمتر</option>
+      <option>چهار میلیمتر</option>
+	  <option>شش میلیمتر</option>
+      <option>هشت میلیمتر</option>
     </select>
 	</div>
     <div class="col-md-12 form-group">
-      <label for="validationTooltip06">توضیحات</label>
-      <textarea name="" dir="rtl" class="form-control input display-7" id="validationTooltip06" placeholder="هرگونه توضیح در مورد محصول مانند ضخامت و ابعاد و یا تغییر آدرس و مشخصات دیگر را در اینجا بنویسید" required></textarea>
+      <label for="validationTooltip10">توضیحات</label>
+      <textarea name="entry.1610986555" dir="rtl" class="form-control input display-7" id="validationTooltip10" placeholder="هرگونه توضیح در مورد محصول مانند ابعاد و زوایا و یا تغییر آدرس و مشخصات دیگر را در اینجا بنویسید" required></textarea>
     </div>
 	<div class="col-md-12 mb-3">
-	<label id="filename" align="left" class="custom-file-label" for="customFile">آپلود هرگونه تصویر و یا فایل مورد نیاز مانند تصویر محل نصب و غیره</label>
-	<input type="file" class="custom-file-input" id="customFile">
+	<label id="filename" align="left" class="custom-file-label" for="customFile">آپلود هرگونه تصویر و یا فایل مورد نیاز</label>
+	<input name="entry.1198207228" type="file" class="custom-file-input" id="customFile">
 	</div>
+	<label>*شما می توانید ابعاد غیر استاندارد را خودتان طراحی کرده و فایل آنرا همینجا برای ما آپلود نمایید</label>
+	<label>*در صورت نیاز به آپلود بیش از یک فایل آنها را در قالب یک فایل زیپ آپلود نمایید</label>
+	<label>*در صورت تمایل به سفارش بیش از یک نوع محصول هر یک از محصولات را جداگانه ثبت سفارش نمایید</label>
   </div>
-  <button class="btn btn-sm btn-primary display-5" style="font-size: 20px;" type="submit"><span class="sr-only"></span>پیش نمایش خرید</button>
+  <div id="btn-btn" align="right" class="col-md-4 mb-3">
+  <button class="btn btn-sm btn-primary display-5" style="font-size: 20px;" type="submit">مشاهده سفارش</button>
+  </div>
 </form>
     </div>
     </div>
@@ -304,6 +315,34 @@
         </div>
     </div>
 </section>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("FormControlSelect1").value;
+  if (x === "تابلوی دیواری شاسی") {
+    document.getElementById('validationTooltip09').disabled = false;
+    document.getElementById('FormControlSelect4').disabled = true;
+	document.getElementById('FormControlSelect2').disabled = true;
+  } else {
+	document.getElementById('validationTooltip09').disabled = true;
+	document.getElementById('FormControlSelect4').disabled = false;
+	document.getElementById('FormControlSelect2').disabled = false;
+  }
+}
+</script>
+
+<script>
+function myFunction2() {
+  var x = document.getElementById("FormControlSelect3").value;
+  if (x === "دلخواه مشتری") {
+    document.getElementById('validationTooltip08').disabled = true;
+	document.getElementById('validationTooltip09').disabled = true;
+  } else {
+	document.getElementById('validationTooltip08').disabled = false;
+	document.getElementById('validationTooltip09').disabled = false;
+  }
+}
+</script>
 
   <ol id="new-projects" hidden="true"></ol>
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
