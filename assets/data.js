@@ -1,5 +1,4 @@
 $('#inputid').on('keyup', function(event) {
-    $('#loader').removeAttr('hidden');
 	event.preventDefault();
     var str = $('#inputid').val();
 $.ajax({
@@ -16,14 +15,13 @@ $.ajax({
       $('#inputcity').val( $('#userdata').find('td:nth-child(6)').eq(1).html() );
       $('#userid').val( $('#userdata').find('td:nth-child(7)').eq(1).html() );
       $('#username').text( $('#userdata').find('td:nth-child(1)').eq(1).html() );
-  });
-});
-
-$("#inputname").on("change",function(e) {
-  if ($("#inputname").val() != '') {
-    $('#loader').attr('hidden', 'true');
-    return false; // cancel submit
+      if ($("#inputname").val() != '') {
+    	$('#loader').attr('hidden', 'true');
+        return false; // cancel submit
     } else
+	$('#loader').removeAttr('hidden');
+});
+  });
 });
 
 function makeid(length) { 
