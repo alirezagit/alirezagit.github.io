@@ -1,7 +1,7 @@
 $('#inputid').on('keyup', function(event) {
+    $('#loader').removeAttr('hidden');
 	event.preventDefault();
     var str = $('#inputid').val();
-    $('#loader').removeAttr('hidden');
 $.ajax({
    url: "https://docs.google.com/spreadsheets/d/14TYS9UBM5PETa2Y3_l68nwJZTjxjJkg9hMnOiizN3Gg/gviz/tq?tqx=out:html&tq=SELECT+B,+C,+D,+E,+F,+G,+H+WHERE+H=" + "+" + "'" + str + "'",
    context: document.body
@@ -20,7 +20,6 @@ $.ajax({
 });
 
 $("#inputname").on("change",function(e) {
-  event.preventDefault();
   if ($("#inputname").val() != '') {
     $('#loader').attr('hidden', 'true');
     return false; // cancel submit
