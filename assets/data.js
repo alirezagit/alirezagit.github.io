@@ -18,6 +18,15 @@ $.ajax({
   });
 });
 
+$("#inputname").on("change",function(e) {
+  event.preventDefault();
+  if ($("#inputname").val() == '') {
+    $('#loader').removeAttr('hidden');
+    return false; // cancel submit
+    } else
+    $('#loader').attr('hidden', 'true');
+});
+
 function makeid(length) { 
 var result = '';
 var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
