@@ -15,11 +15,6 @@ $.ajax({
       $('#inputcity').val( $('#userdata').find('td:nth-child(6)').eq(1).html() );
       $('#userid').val( $('#userdata').find('td:nth-child(7)').eq(1).html() );
       $('#username').text( $('#userdata').find('td:nth-child(1)').eq(1).html() );
-      if ($("#inputname").val() != '') {
-    	$('#loader').attr('hidden', 'true');
-        return false; // cancel submit
-    } else
-	$('#loader').removeAttr('hidden');
 });
   });
 });
