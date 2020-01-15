@@ -25,7 +25,7 @@ type: "POST",
 url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScAMlOpsQOXLjYqB22kPeqE7lcU1t6eUE9HHWJV0EyBQtbD4w/formResponse",
 data: dataString,
 success: alert('پیام شما با موفقیت ارسال شد. با تشکر');
-location.reload(
+location.reload()
 });
 }
 form.classList.add('was-validated');
