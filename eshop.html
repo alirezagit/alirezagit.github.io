@@ -164,7 +164,7 @@
 	</div>
 </form>
    <div id="user-order" class="modal-body" hidden="true">
-	<form id="user-form" action="https://script.google.com/macros/s/AKfycbyH9fYXEcv4D5T00fPNcnnSyJ2gABuVRj5nUaW-qDUQiAd70MWQ/exec" method="POST" align="right" dir="rtl" lang="fa" class="needs-validation3" novalidate>
+	<form id="user-form" action="https://script.google.com/macros/s/AKfycbyH9fYXEcv4D5T00fPNcnnSyJ2gABuVRj5nUaW-qDUQiAd70MWQ/exec" method="POST" align="right" dir="rtl" lang="fa" class="needs-validation4" novalidate>
 	    <div class="col-md-4 mb-3 md-form align-items-center">
 		<input type="hidden" value="" name="fileContent" id="fileContent">
          	<input type="hidden" value="" name="filename" id="filename">
@@ -179,7 +179,7 @@
 	<div class="form-row">
     <div class="col-md-4 mb-3 md-form">
     <label for="FormControlSelect1">نوع محصول</label>
-    <select name="محصول" class="form-control" id="FormControlSelect1" onChange="myFunction()">
+    <select name="محصول" class="form-control" id="FormControlSelect1" onChange="myFunction()" required>
       <option>پنل آسمان مجازی</option>
       <option>پنل سقفی سه بعدی</option>
       <option>تابلوی دیواری شاسی</option>
@@ -187,7 +187,7 @@
   </div>
      <div class="col-md-4 mb-3 md-form">
     <label for="FormControlSelect2">سایز محصول</label>
-    <select name="نوع" class="form-control" id="FormControlSelect2">
+    <select name="نوع" class="form-control" id="FormControlSelect2" required>
       <option>استاندارد</option>
       <option>غیر استاندارد</option>
     </select>
@@ -200,7 +200,7 @@
 	<div class="form-row">
 	<div class="col-md-3 mb-3 md-form">
     <label for="FormControlSelect3">تصویر محصول</label>
-    <select name="تصویر" class="form-control" id="FormControlSelect3" onChange="myFunction2()">
+    <select name="تصویر" class="form-control" id="FormControlSelect3" onChange="myFunction2()"  required>
       <option>از آلبوم یوتاب</option>
       <option>دلخواه مشتری</option>
     </select>
@@ -215,7 +215,7 @@
     </div>
 	<div id="prodepth" class="col-md-3 mb-3 md-form">
     <label for="FormControlSelect4">ضخامت محصول</label>
-    <select name="ضخامت" class="form-control" id="FormControlSelect4">
+    <select name="ضخامت" class="form-control" id="FormControlSelect4" required>
       <option>دو میلیمتر</option>
       <option>چهار میلیمتر</option>
 	  <option>شش میلیمتر</option>
@@ -235,7 +235,7 @@
 	<label>*در صورت تمایل به سفارش بیش از یک نوع محصول هر یک از محصولات را جداگانه ثبت سفارش نمایید</label>
   </div>
   <div id="btn-btn" align="right" class="col-md-4 mb-3">
-  <button class="btn btn-sm btn-primary display-5" style="font-size: 20px;" type="button" onClick="UploadFile();">مشاهده سفارش</button>
+  <button class="btn btn-sm btn-primary display-5" style="font-size: 20px;" type="submit">مشاهده سفارش</button>
   </div>
 </form>
     </div>
@@ -327,7 +327,7 @@
 </section>
 	
 <script>
-function UploadFile() {
+function UploadFile2() {
   var reader = new FileReader();
   var file = document.getElementById('customFile').files[0];
   reader.onload = function(){
@@ -383,6 +383,7 @@ function myFunction2() {
   <script src="https://www.google.com/recaptcha/api.js?explicit&hl=fa"></script>
   <script src="assets/valid.js"></script>
   <script src="assets/valid2.js"></script>
+  <script src="assets/valid3.js"></script>
   <script src="assets/data.js"></script>
   <script src="assets/indexvalid.js"></script>
   
