@@ -26,8 +26,7 @@ event.preventDefault(); // to prevent default page reloading
   }
 	reader.readAsDataURL(file);
 }
-
-}
+});
 form.classList.add('was-validated');
 }, false);
 });
