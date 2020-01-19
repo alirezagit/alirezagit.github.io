@@ -1,4 +1,3 @@
-(function() {
 window.addEventListener('load', function() {
 // Fetch all the forms we want to apply custom Bootstrap validation styles to
 var forms = document.getElementsByClassName('needs-validation4');
@@ -11,23 +10,24 @@ event.stopPropagation();
 }
 if (form.checkValidity() === true) {
 event.preventDefault(); // to prevent default page reloading
+var dataString = $(this).serialize(); // to get the form data
                 
-  var content = document.getElementById("customFile").value
-  if (content === "") {
-	document.getElementById('user-form').submit();
-  }
-  else
-  var reader = new FileReader();
-  var file = document.getElementById('customFile').files[0];
-  reader.onload = function(){
-    document.getElementById('fileContent').value=reader.result;
-	document.getElementById('filename').value=file.name;
-	document.getElementById('user-form').submit();
-  }
-	reader.readAsDataURL(file);
-}
+$.ajax({
+type: "POST",
+url: "https://script.google.com/macros/s/AKfycbyH9fYXEcv4D5T00fPNcnnSyJ2gABuVRj5nUaW-qDUQiAd70MWQ/exec",
+data: dataString,
+complete: Exec
 });
+}
 form.classList.add('was-validated');
 }, false);
 });
 }, false);
+})();
+
+function Exec() {
+	alert("سفارش شما با موفقیت ثبت گردید و اطلاعات آن با ایمیل برایتان ارسال شد. بزودی با شما تماس خواهیم گرفت. با تشکر");
+	$('#modal').modal('toggle');
+	$('#user-form')[0].reset();
+	location.reload()
+}
