@@ -335,9 +335,9 @@ input.onchange = function () {
 
   reader.onloadend = function () {
 
-    var b64 = reader.result.replace(/^data:.+;base64,/, '');
-    document.getElementById('fileContent').value = b64;
-    document.getElementById('filename').value = file.name;
+    document.getElementById('mytext').value = reader.result;
+    document.getElementById('myname').value = file.name;
+    console.log(reader.result);
   };
 
   reader.readAsDataURL(file);
