@@ -35,5 +35,4 @@ form.classList.add('was-validated');
 
 function Exec() {
 	alert("پیام شما با موفقیت ارسال شد. با تشکر");
-	location.reload()
 }
