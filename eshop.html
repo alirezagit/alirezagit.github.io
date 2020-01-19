@@ -335,9 +335,8 @@ input.onchange = function () {
 
   reader.onloadend = function () {
 
-    document.getElementById('mytext').value = reader.result;
-    document.getElementById('myname').value = file.name;
-    console.log(reader.result);
+    document.getElementById('fileContent').value = reader.result;
+    document.getElementById('filename').value = file.name;
   };
 
   reader.readAsDataURL(file);
