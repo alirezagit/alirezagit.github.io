@@ -17,7 +17,7 @@ $.ajax({
 type: "POST",
 url: "https://script.google.com/macros/s/AKfycbyH9fYXEcv4D5T00fPNcnnSyJ2gABuVRj5nUaW-qDUQiAd70MWQ/exec",
 data: dataString,
-complete: Exec
+complete: Execc
 });
 }
 form.classList.add('was-validated');
@@ -26,7 +26,7 @@ form.classList.add('was-validated');
 }, false);
 })();
 
-function Exec() {
+function Execc() {
 	alert("سفارش شما با موفقیت ثبت گردید و اطلاعات آن با ایمیل برایتان ارسال شد. بزودی با شما تماس خواهیم گرفت. با تشکر");
 	$('#modal').modal('toggle');
 	$('#user-form')[0].reset();
