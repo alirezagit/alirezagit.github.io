@@ -23,8 +23,6 @@
   <link href="assets/fonts/style.css" rel="stylesheet">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
-  <script type="text/javascript" src="assets/bootstrap/js/bootstrap-filestyle.min.js"> </script>
-  
 </head>
 <body onload="makeid(10)">
   <section class="menu cid-rE1y2lSwwv" once="menu" id="menu1-h">
@@ -228,8 +226,7 @@
       <textarea name="توضیحات" dir="rtl" class="form-control input display-7" id="validationTooltip11" placeholder="هرگونه توضیح در مورد محصول مانند ابعاد و زوایا و یا تغییر آدرس و مشخصات دیگر را در اینجا بنویسید" required></textarea>
     </div>
 	<div class="col-md-12 mb-3">
-	<label align="left" for="customFile">آپلود هرگونه تصویر و یا فایل مورد نیاز</label>
-	<input type="file" id="customFile">
+	<input type="file" class="file" id="customFile">
 	</div>
 	<label>*شما می توانید ابعاد غیر استاندارد را خودتان طراحی کرده و فایل آنرا همینجا برای ما آپلود نمایید</label>
 	<label>*در صورت نیاز به آپلود بیش از یک فایل آنها را در قالب یک فایل زیپ آپلود نمایید</label>
@@ -326,14 +323,6 @@
         </div>
     </div>
 </section>
-	
-<script>
-$('#customFile').filestyle({
-    iconName : 'glyphicon glyphicon-file',
-    buttonText : 'انتخاب فایل',
-    buttonName : 'btn-warning'
-});                     
-</script>
 	
 <script>
 var input = document.querySelector('input[type=file]');
