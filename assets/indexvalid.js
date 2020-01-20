@@ -24,7 +24,7 @@ $.ajax({
 type: "POST",
 url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScAMlOpsQOXLjYqB22kPeqE7lcU1t6eUE9HHWJV0EyBQtbD4w/formResponse",
 data: dataString,
-complete: Exec
+complete: Execcc
 });
 }
 form.classList.add('was-validated');
@@ -33,6 +33,6 @@ form.classList.add('was-validated');
 }, false);
 })();
 
-function Exec() {
+function Execcc() {
 	alert("پیام شما با موفقیت ارسال شد. با تشکر");
 }
