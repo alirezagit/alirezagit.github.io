@@ -226,7 +226,7 @@
       <textarea name="توضیحات" dir="rtl" class="form-control input display-7" id="validationTooltip11" placeholder="هرگونه توضیح در مورد محصول مانند ابعاد و زوایا و یا تغییر آدرس و مشخصات دیگر را در اینجا بنویسید" required></textarea>
     </div>
 	<div class="col-md-12 mb-3">
-	<input type="file" class="file" id="customFile">
+	<input type="file" id="customFile">
 	</div>
 	<label>*شما می توانید ابعاد غیر استاندارد را خودتان طراحی کرده و فایل آنرا همینجا برای ما آپلود نمایید</label>
 	<label>*در صورت نیاز به آپلود بیش از یک فایل آنها را در قالب یک فایل زیپ آپلود نمایید</label>
@@ -325,6 +325,31 @@
 </section>
 	
 <script>
+$('customFile').filestyle({
+  // button text
+  'buttonText' : 'انتخاب فایل',
+  // custom icon
+  'iconName' : 'glyphicon glyphicon-folder-open',
+  // CSS class of button
+  'buttonName' : 'btn-default',
+  // lg, nr, sm
+  'size' : 'nr',
+  // enables input
+  'input' : true,
+  // enables badge
+  'badge' : true,
+  // enable icon
+  'icon' : true,
+  // place button at the beginning of the input field
+  'buttonBefore' : false,
+  // disabled input field
+  'disabled' : false,
+  // custom placeholder
+  'placeholder': 'آپلود هرگونه فایل مرتبط با سفارش شما'
+})
+</script>
+
+<script>
 var input = document.querySelector('input[type=file]');
 
 input.onchange = function () {
@@ -382,6 +407,7 @@ function myFunction2() {
   <script src="assets/smoothscroll/smooth-scroll.js"></script>
   <script src="assets/theme/js/script.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap-filestyle.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js?explicit&hl=fa"></script>
   <script src="assets/valid.js"></script>
   <script src="assets/valid2.js"></script>
