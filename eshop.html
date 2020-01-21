@@ -170,7 +170,7 @@
 	    <div class="col-md-4 mb-3 md-form align-items-center">
 		<input type="hidden" value="" name="fileContent" id="fileContent">
          	<input type="hidden" value="" name="filename" id="filename">
-	    	<input name="نام" type="hidden" class="form-control" id="inputname">
+	    	<input name="نام" type="hidden" class="form-control" id="inputname" onChange="myFunction3()>
 		<input name="تلفن" type="hidden" class="form-control" id="inputphone">
 		<input name="ایمیل" type="hidden" class="form-control" id="inputemail">
 		<input name="آدرس" type="hidden" class="form-control" id="inputaddr">
@@ -393,6 +393,17 @@ function myFunction2() {
   } else {
 	document.getElementById('validationTooltip09').disabled = false;
 	document.getElementById('validationTooltip10').disabled = false;
+  }
+}
+</script>
+
+<script>
+function myFunction3() {
+  var y = document.getElementById("inputname").value;
+  if (y === "") {
+    document.getElementById('loader').hidden = false;
+  } else {
+    document.getElementById('loader').hidden = true;
   }
 }
 </script>
