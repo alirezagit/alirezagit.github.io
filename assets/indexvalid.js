@@ -36,7 +36,7 @@ form.classList.add('was-validated');
 function toggleAlert() {
     $(".alert").toggleClass('in out'); 
     return false; // Keep close.bs.alert event from removing from DOM
-}
+};
 
 function Execcc() {
 	alert("پیام شما با موفقیت ارسال شد. با تشکر");
