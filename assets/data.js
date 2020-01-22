@@ -15,12 +15,13 @@ $.ajax({
       $('#inputcity').val( $('#userdata').find('td:nth-child(6)').eq(1).html() );
       $('#userid').val( $('#userdata').find('td:nth-child(7)').eq(1).html() );
       $('#username').text( $('#userdata').find('td:nth-child(1)').eq(1).html() );
+      $('#loader').attr('hidden', 'true');
   });
 });
 
 function makeid(length) { 
 var result = '';
-var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+var characters = 'ABCDEFGHJKLMNPQRSTUVWXYZ123456789';
 var charactersLength = characters.length;
 for ( var i = 0; i < length; i++ ) {
 	result += characters.charAt(Math.floor(Math.random()*
