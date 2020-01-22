@@ -152,13 +152,10 @@
    	<form id="order-form" class="needs-validation2" novalidate>
     <div class="col-md-4 mb-3 md-form align-items-center">
       <label class="mbr-text align-center pb-3 mbr-fonts-style display-7" for="inputid">کد کاربری شما</label>
-      <input name="inputid" type="text" class="form-control" id="inputid"  onClick="myFunction3()" required>
+      <input name="inputid" type="text" class="form-control" id="inputid" required>
 	</div>
-    <div id="loader" class="spinner-grow" role="status" hidden="true">
- 	<span class="sr-only">Loading...</span>
-    </div>
     <div class="col-md-4 mb-3 md-form align-items-center">
-      	<label id="username" class="mbr-text align-center pb-3 mbr-fonts-style display-7" onChange="myFunction4()"></label>
+      	<label id="username" class="mbr-text align-center pb-3 mbr-fonts-style display-7"></label>
     </div>
     </div>
 	<div id="btn-btn" align="center" class="col-md-3 mb-3">
@@ -326,31 +323,6 @@
         </div>
     </div>
 </section>
-	
-<script>
-$('customFile').filestyle({
-  // button text
-  'buttonText' : 'انتخاب فایل',
-  // custom icon
-  'iconName' : 'glyphicon glyphicon-folder-open',
-  // CSS class of button
-  'buttonName' : 'btn-default',
-  // lg, nr, sm
-  'size' : 'nr',
-  // enables input
-  'input' : true,
-  // enables badge
-  'badge' : true,
-  // enable icon
-  'icon' : true,
-  // place button at the beginning of the input field
-  'buttonBefore' : false,
-  // disabled input field
-  'disabled' : false,
-  // custom placeholder
-  'placeholder': 'آپلود هرگونه فایل مرتبط با سفارش شما'
-})
-</script>
 
 <script>
 var input = document.querySelector('input[type=file]');
@@ -394,18 +366,6 @@ function myFunction2() {
 	document.getElementById('validationTooltip09').disabled = false;
 	document.getElementById('validationTooltip10').disabled = false;
   }
-}
-</script>
-
-<script>
-function myFunction3() {
-    document.getElementById('loader').hidden = false;
-}
-</script>
-	
-<script>
-function myFunction4() {
-    document.getElementById('loader').hidden = true;
 }
 </script>
 
