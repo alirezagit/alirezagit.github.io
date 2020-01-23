@@ -121,10 +121,6 @@
                 </div>
 		<div>
                 <form align="right" dir="rtl" lang="fa" id="contact-form" class="needs-validation3" novalidate>
-		<div class="alert alert-success alert-dismissible fade out" role="alert">
-   			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    			<strong>پیام شما با موفقیت ارسال گردید. با تشکر</strong>
- 		</div>
 		<div class="dragArea row">
                 <div class="col-md-6  form-group">
                         <input type="text" name="entry.1407109593" placeholder="نام و نام خانوادگی" dir="rtl" class="form-control input display-7" id="validationTooltip11" required>
@@ -145,7 +141,12 @@
 	             	لطفا آزمون امنیتی را انجام دهید
 		  </div>
     </div>
-		<br>
+		<div class="alert alert-success alert-dismissible fade" role="alert" id="buttonAlert">
+     		<strong>Success!</strong> You just showed an alert.
+    		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    		<span aria-hidden="true">&times;</span>
+   		</button>
+		</div>
 		<div class="col-md-12 input-group-btn"><button type="submit" id="submit-form" class="btn btn-primary btn-form display-4"><span class="" style="font-size: 30px; color: rgb(255, 255, 255);"></span>ارسال</button></div>
 		</div>
 		</form>
