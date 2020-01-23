@@ -24,8 +24,7 @@ $.ajax({
 type: "POST",
 url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScAMlOpsQOXLjYqB22kPeqE7lcU1t6eUE9HHWJV0EyBQtbD4w/formResponse",
 data: dataString,
-complete: $("#buttonAlert").addClass('show')
-
+complete: toggleAlert
 });
 }
 form.classList.add('was-validated');
@@ -35,10 +34,5 @@ form.classList.add('was-validated');
 })();
 
 function toggleAlert() {
-    $(".alert").toggleClass('in out'); 
-    return false; // Keep close.bs.alert event from removing from DOM
-}
-
-function Execcc() {
-	alert("پیام شما با موفقیت ارسال شد. با تشکر");
+	$("#buttonAlert").addClass('show')
 }
