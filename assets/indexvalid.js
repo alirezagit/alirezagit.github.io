@@ -34,5 +34,6 @@ form.classList.add('was-validated');
 })();
 
 function toggleAlert() {
+	$("alertbox").removeAttr("hidden"); 
 	$("#buttonAlert").addClass('show')
 }
