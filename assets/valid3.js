@@ -11,7 +11,6 @@ event.stopPropagation();
 }
 if (form.checkValidity() === true) {
 event.preventDefault(); // to prevent default page reloading
-spin
 var dataString = $(this).serialize(); // to get the form data
                 
 $.ajax({
@@ -33,12 +32,3 @@ function Execc() {
 	$('#user-form')[0].reset();
 	location.reload()
 }
-
-function spin() {
-      // disable button
-      $("orderbtn").prop("disabled", true);
-      // add spinner to button
-      $("orderbtn").html(
-        '<span class="spinner-border spinner-border-md" role="status" aria-hidden="true"></span>'
-      );
-    };
