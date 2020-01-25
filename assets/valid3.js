@@ -31,4 +31,4 @@ function Execc() {
 	$('#modal').modal('toggle');
 	$('#user-form')[0].reset();
 	location.reload()
-}
+};
