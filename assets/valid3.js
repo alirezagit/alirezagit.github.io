@@ -11,7 +11,7 @@ event.stopPropagation();
 }
 if (form.checkValidity() === true) {
 event.preventDefault(); // to prevent default page reloading
-$("spinner").removeAttr("hidden");
+spin
 var dataString = $(this).serialize(); // to get the form data
                 
 $.ajax({
@@ -33,4 +33,8 @@ function Execc() {
 	$('#modal').modal('toggle');
 	$('#user-form')[0].reset();
 	location.reload()
+}
+
+function spin() {
+	$("spinner").removeAttr("hidden");
 }
