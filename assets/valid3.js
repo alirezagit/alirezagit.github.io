@@ -28,20 +28,17 @@ form.classList.add('was-validated');
 })();
 
 function Execc() {
-	$("spinner").prop("hidden", true);
 	alert("سفارش شما با موفقیت ثبت گردید و اطلاعات آن با ایمیل برایتان ارسال شد. بزودی با شما تماس خواهیم گرفت. با تشکر");
 	$('#modal').modal('toggle');
 	$('#user-form')[0].reset();
 	location.reload()
 }
 
-$(document).ready(function() {
-    $("#orderbtn").click(function() {
+function spin() {
       // disable button
-      $(this).prop("disabled", true);
+      $("orderbtn").prop("disabled", true);
       // add spinner to button
-      $(this).html(
-        `<span class="spinner-border spinner-border-md" role="status" aria-hidden="true"></span>
+      $("orderbtn").html(
+        '<span class="spinner-border spinner-border-md" role="status" aria-hidden="true"></span>'
       );
-    });
-});
+    };
