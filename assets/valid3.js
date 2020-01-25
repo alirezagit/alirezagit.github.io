@@ -28,7 +28,7 @@ form.classList.add('was-validated');
 })();
 
 function Execc() {
-	$("spinner").prop("hidden", true)
+	$("spinner").prop("hidden", true);
 	alert("سفارش شما با موفقیت ثبت گردید و اطلاعات آن با ایمیل برایتان ارسال شد. بزودی با شما تماس خواهیم گرفت. با تشکر");
 	$('#modal').modal('toggle');
 	$('#user-form')[0].reset();
