@@ -19,6 +19,7 @@ event.stopPropagation();
 }
 if (form.checkValidity() === true) {
 event.preventDefault(); // to prevent default page reloading
+loaderOn()
 var dataString = $(this).serialize(); // to get the form data
 $.ajax({
 type: "POST",
@@ -37,6 +38,6 @@ function toggleAlert() {
 	alertify.success('پیام شما با موفقیت ارسال گردید. با تشکر');
 }
 
-function toggleLoader() {
-	ldbtn.toggle();
+function loaderOn() {
+	$(“submit-form”).addClass(“running”);
 }
