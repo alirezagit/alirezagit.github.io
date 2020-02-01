@@ -19,14 +19,12 @@ event.stopPropagation();
 }
 if (form.checkValidity() === true) {
 event.preventDefault(); // to prevent default page reloading
-toggleLoader
 var dataString = $(this).serialize(); // to get the form data
 $.ajax({
 type: "POST",
 url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScAMlOpsQOXLjYqB22kPeqE7lcU1t6eUE9HHWJV0EyBQtbD4w/formResponse",
 data: dataString,
 complete: toggleAlert
-	  toggleLoader
 });
 }
 form.classList.add('was-validated');
