@@ -35,6 +35,6 @@ form.classList.add('was-validated');
 })();
 
 function toggleAlert() {
-	ldbtn.toggle()
+	ldbtn.toggle();
 	alertify.success('پیام شما با موفقیت ارسال گردید. با تشکر');
 }
