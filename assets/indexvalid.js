@@ -16,7 +16,6 @@ form.addEventListener('submit', function(event) {
 if (form.checkValidity() === false) {
 event.preventDefault();
 event.stopPropagation();
-toggleAlert();
 }
 if (form.checkValidity() === true) {
 event.preventDefault(); // to prevent default page reloading
@@ -25,6 +24,9 @@ $.ajax({
 type: "POST",
 url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScAMlOpsQOXLjYqB22kPeqE7lcU1t6eUE9HHWJV0EyBQtbD4w/formResponse",
 data: dataString,
+beforeSend: function() {
+    $("submit-form").addClass("running");
+},
 complete: toggleAlert
 });
 }
