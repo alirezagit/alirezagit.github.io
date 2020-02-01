@@ -223,13 +223,14 @@ var ldbtn = new ldLoader({root: "#submit-form"});
 </script>
 	
 <script>
-$(document)
-  .ajaxStart(function () {
-    ldbtn.toggle()
-  })
-  .ajaxStop(function () {
-    ldbtn.toggle()
-  });
+jQuery.ajaxSetup({
+  beforeSend: function() {
+     $( "submit-form" ).addClass( "running" );
+  },
+  complete: function(){
+     $( "submit-form" ).removeClass( "running" );
+  },
+});
 </script>
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
