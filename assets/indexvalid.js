@@ -19,7 +19,6 @@ event.stopPropagation();
 }
 if (form.checkValidity() === true) {
 event.preventDefault(); // to prevent default page reloading
-loaderOn()
 var dataString = $(this).serialize(); // to get the form data
 $.ajax({
 type: "POST",
@@ -36,8 +35,4 @@ form.classList.add('was-validated');
 
 function toggleAlert() {
 	alertify.success('پیام شما با موفقیت ارسال گردید. با تشکر');
-}
-
-function loaderOn() {
-	$(“submit-form”).addClass(“running”);
 }
