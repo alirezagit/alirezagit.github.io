@@ -18,7 +18,6 @@ event.preventDefault();
 event.stopPropagation();
 }
 if (form.checkValidity() === true) {
-ldbtn.toggle()
 event.preventDefault(); // to prevent default page reloading
 var dataString = $(this).serialize(); // to get the form data
 $.ajax({
