@@ -23,10 +23,12 @@
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link href="assets/fonts/style.css" rel="stylesheet">
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="loader/ldbtn.min.css">
+  <link rel="stylesheet" href="loader/ldld.min.css">
+
+  <script src="loader/ldld.min.js"></script>  
 </head>
 <body>
   <section class="services1 cid-rDypC7SRzi mbr-parallax-background" id="services1-o">
@@ -143,7 +145,11 @@
 	             	لطفا آزمون امنیتی را انجام دهید
 		  </div>
     		</div>
-		<div class="col-md-12 input-group-btn"><button type="submit" id="submit-form" class="btn btn-primary btn-form display-4"><span class="" style="font-size: 30px; color: rgb(255, 255, 255);"></span>ارسال</button></div>
+		<div class="col-md-12 input-group-btn"><button type="submit" id="submit-form" class="btn btn-sm btn-primary btn-form display-4 ld-ext-left"><span class="" style="font-size: 30px; color: rgb(255, 255, 255);"></span>ارسال
+		<div class="ld ldld bare align-middle"
+  		style="width:1em;height:1em">
+ 		</div>
+		</button></div>
 		</div>
 		</form>
 		</div>
@@ -211,7 +217,10 @@
         </div>
     </nav>
 </section>
-
+	
+<script>
+var ldbtn = new ldLoader({root: "#submit-form"});
+</script>
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
   <script src="assets/popper/popper.min.js"></script>
@@ -229,7 +238,6 @@
   <script src="https://www.google.com/recaptcha/api.js?explicit&hl=fa"></script>
   <script src="assets/indexvalid.js"></script>
   
-  
- <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
   </body>
 </html>
