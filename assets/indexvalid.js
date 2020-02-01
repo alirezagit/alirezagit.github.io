@@ -19,7 +19,6 @@ event.stopPropagation();
 }
 if (form.checkValidity() === true) {
 event.preventDefault(); // to prevent default page reloading
-$( "ldbtn" ).toggle();
 var dataString = $(this).serialize(); // to get the form data
 $.ajax({
 type: "POST",
@@ -36,5 +35,8 @@ form.classList.add('was-validated');
 
 function toggleAlert() {
 	alertify.success('پیام شما با موفقیت ارسال گردید. با تشکر');
-	$( "ldbtn" ).toggle();
+}
+
+function toggleLoader() {
+	ldbtn.toggle();
 }
