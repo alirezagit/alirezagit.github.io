@@ -221,6 +221,16 @@
 <script>
 var ldbtn = new ldLoader({root: "#submit-form"});
 </script>
+	
+<script>
+$(document)
+  .ajaxStart(function () {
+    ldbtn.toggle()
+  })
+  .ajaxStop(function () {
+    ldbtn.toggle()
+  });
+</script>
 
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
   <script src="assets/popper/popper.min.js"></script>
