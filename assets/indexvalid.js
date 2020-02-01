@@ -18,15 +18,14 @@ event.preventDefault();
 event.stopPropagation();
 }
 if (form.checkValidity() === true) {
+ldbtn.toggle()
 event.preventDefault(); // to prevent default page reloading
 var dataString = $(this).serialize(); // to get the form data
 $.ajax({
-ldbtn.toggle()
 type: "POST",
 url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScAMlOpsQOXLjYqB22kPeqE7lcU1t6eUE9HHWJV0EyBQtbD4w/formResponse",
 data: dataString,
 complete: toggleAlert
-	  ldbtn.toggle()
 });
 }
 form.classList.add('was-validated');
@@ -38,4 +37,3 @@ form.classList.add('was-validated');
 function toggleAlert() {
 	alertify.success('پیام شما با موفقیت ارسال گردید. با تشکر');
 }
- 
