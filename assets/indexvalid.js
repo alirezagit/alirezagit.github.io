@@ -38,3 +38,4 @@ form.classList.add('was-validated');
 function toggleAlert() {
 	alertify.success('پیام شما با موفقیت ارسال گردید. با تشکر');
 }
+ 
