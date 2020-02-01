@@ -14,9 +14,9 @@ var forms = document.getElementsByClassName('needs-validation3');
 var validation = Array.prototype.filter.call(forms, function(form) {
 form.addEventListener('submit', function(event) {
 if (form.checkValidity() === false) {
-toggleAlert
 event.preventDefault();
 event.stopPropagation();
+toggleAlert();
 }
 if (form.checkValidity() === true) {
 event.preventDefault(); // to prevent default page reloading
