@@ -35,8 +35,5 @@ form.classList.add('was-validated');
 })();
 
 function Exec() {
-	alert("اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم");
-	$('#modal').modal('toggle');
-	$('#register-form')[0].reset();
-	location.reload()
+if(!alert('اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم')){window.location.reload();}
 }
