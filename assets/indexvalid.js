@@ -19,7 +19,6 @@ event.stopPropagation();
 }
 if (form.checkValidity() === true) {
 event.preventDefault(); // to prevent default page reloading
-ldbtn.toggle();
 var dataString = $(this).serialize(); // to get the form data
 $.ajax({
 type: "POST",
