@@ -25,7 +25,8 @@ $.ajax({
 type: "POST",
 url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScAMlOpsQOXLjYqB22kPeqE7lcU1t6eUE9HHWJV0EyBQtbD4w/formResponse",
 data: dataString,
-complete: toggleAlert
+complete: toggleAlert,
+done: ldbtn.toggle()
 });
 }
 form.classList.add('was-validated');
@@ -38,5 +39,4 @@ var ldbtn = new ldLoader({root: "#submit-form"});
 
 function toggleAlert() {
 	alertify.success('پیام شما با موفقیت ارسال گردید. با تشکر');
-	ldbtn.toggle()
 }
