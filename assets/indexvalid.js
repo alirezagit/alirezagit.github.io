@@ -25,9 +25,7 @@ $.ajax({
 type: "POST",
 url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScAMlOpsQOXLjYqB22kPeqE7lcU1t6eUE9HHWJV0EyBQtbD4w/formResponse",
 data: dataString,
-beforeSend: function() {
-ldbtn.toggle()
-},
+beforeSend: ldbtn.toggle(),
 complete: ldbtn.toggle()
 });
 }
