@@ -28,7 +28,6 @@ beforeSend: function() {
 },
 complete: function(data) {
     ldbtn.toggle();
-    $('#contact-form').trigger("reset");
 }
 });
 }
