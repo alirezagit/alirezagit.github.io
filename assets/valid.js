@@ -29,10 +29,8 @@ beforeSend: function() {
     ldbtn2.toggle();
 },
 complete: function(data) {
+    alertify.confirm('اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم').set('onok', function(closeEvent){ alertify.success('Ok');} );
     ldbtn2.toggle();
-    alertify.set('notifier','position', 'bottom-center');
-    alertify.set('notifier','delay', 10);
-    alertify.success('اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم');
 }
 });
 }
