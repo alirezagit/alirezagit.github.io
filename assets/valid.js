@@ -30,7 +30,9 @@ beforeSend: function() {
 },
 complete: function(data) {
     ldbtn2.toggle();
-    Exec();
+    alertify.set('notifier','position', 'bottom-center');
+    alertify.set('notifier','delay', 10);
+    alertify.success('اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم');
 }
 });
 }
@@ -43,5 +45,5 @@ form.classList.add('was-validated');
 var ldbtn2 = new ldLoader({root: "#register-btn"});
 
 function Exec() {
-    alertify.alert('Youtob', 'اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم', function(){ alertify.success('تایید'); });
+    alertify.alert('Youtob', 'اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم', function(){ alertify.success('تایید'); });  
 }
