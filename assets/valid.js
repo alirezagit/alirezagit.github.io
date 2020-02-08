@@ -30,6 +30,7 @@ beforeSend: function() {
 },
 complete: function(data) {
     ldbtn2.toggle();
+    Exec();
 }
 });
 }
@@ -42,5 +43,6 @@ form.classList.add('was-validated');
 var ldbtn2 = new ldLoader({root: "#register-btn"});
 
 function Exec() {
-if(!alert('اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم')){window.location.reload();}
+    alert('اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم');
+    window.location.reload();
 }
