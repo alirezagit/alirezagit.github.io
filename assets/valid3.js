@@ -17,7 +17,18 @@ $.ajax({
 type: "POST",
 url: "https://script.google.com/macros/s/AKfycbyH9fYXEcv4D5T00fPNcnnSyJ2gABuVRj5nUaW-qDUQiAd70MWQ/exec",
 data: dataString,
-complete: Execc
+beforeSend: function() {
+    ldbtn3.toggle();
+},
+complete: function(data) {
+    alertify.alert()
+    .setting({
+    'title':'یوتاب',
+    'label':'تایید',
+    'message': 'سفارش شما با موفقیت ثبت گردید و اطلاعات آن با ایمیل برایتان ارسال شد. بزودی با شما تماس خواهیم گرفت. با تشکر',
+    }).show();
+    ldbtn3.toggle();
+}
 });
 }
 form.classList.add('was-validated');
@@ -26,6 +37,4 @@ form.classList.add('was-validated');
 }, false);
 })();
 
-function Execc() {
-if(!alert('سفارش شما با موفقیت ثبت گردید و اطلاعات آن با ایمیل برایتان ارسال شد. بزودی با شما تماس خواهیم گرفت. با تشکر')){window.location.reload();}
-}
+var ldbtn3 = new ldLoader({root: "#orderbtn"});
