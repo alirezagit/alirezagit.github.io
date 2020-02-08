@@ -30,7 +30,7 @@ beforeSend: function() {
 },
 complete: function(data) {
     ldbtn2.toggle();
-    alertify.alert('Youtob', 'اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم', function(){ alertify.success('تایید'); });
+    Exec();
 }
 });
 }
