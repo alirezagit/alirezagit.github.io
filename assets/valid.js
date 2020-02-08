@@ -30,7 +30,6 @@ beforeSend: function() {
 },
 complete: function(data) {
     ldbtn2.toggle();
-    Exec();
 }
 });
 }
