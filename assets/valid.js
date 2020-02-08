@@ -29,7 +29,13 @@ beforeSend: function() {
     ldbtn2.toggle();
 },
 complete: function(data) {
-    alertify.alert('یوتاب', 'اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم', function(){ location.reload(); });
+    alertify.alert()
+    .setting({
+    'title':'یوتاب',
+    'label':'تایید',
+    'message': '<a align="right">اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم</a>',
+    'onok': function(){ location.reload(); }
+    }).show();
     ldbtn2.toggle();
 }
 });
