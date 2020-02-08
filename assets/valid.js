@@ -26,10 +26,10 @@ type: "POST",
 url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScIuk7kTrCveD4XrkgZ3qk05d_1qKGQ5RQ_EQAHEgMoFQSgvA/formResponse",
 data: dataString,
 beforeSend: function() {
-    ldbtn.toggle();
+    ldbtn2.toggle();
 },
 complete: function(data) {
-    ldbtn.toggle();
+    ldbtn2.toggle();
     Exec();
 }
 });
@@ -40,7 +40,7 @@ form.classList.add('was-validated');
 }, false);
 })();
 
-var ldbtn = new ldLoader({root: "#register-btn"});
+var ldbtn2 = new ldLoader({root: "#register-btn"});
 
 function Exec() {
 if(!alert('اطلاعات شما با موفقیت در سامانه یوتاب ثبت گردید و کد کاربری از طریق ایمیل برایتان ارسال شد. از شما صمیمانه سپاسگزاریم')){window.location.reload();}
