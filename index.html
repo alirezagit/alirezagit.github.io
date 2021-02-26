@@ -2,10 +2,34 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript" src="https://js.live.net/v7.2/OneDrive.js"></script>
 <title>AlirezaGit...</title>
 </head>
 
 <body>
-  <p>AlirezaGit</p>
-</body>
+<script type="text/javascript">
+  function launchSaveToOneDrive(){
+    OneDrive.save(odOptions);
+  }
+</script>
+
+<input id="fileUploadControl" name="fileUploadControl" type="file" />
+<button onclick="launchSaveToOneDrive()">Save to OneDrive</button>
+  
+<script type="text/javascript">
+  var odOptions = {
+  clientId: "71610dc0-83d0-4d48-b6d3-538343dfec91",
+  action: "save",
+  sourceInputElementId: "fileUploadControl",
+  sourceUri: "dataURI",
+  fileName: "",
+  openInNewWindow: true,
+  advanced: {},
+  success: function(files) { /* success handler */ },
+  progress: function(percent) { /* progress handler */ },
+  cancel: function() { /* cancel handler */ },
+  error: function(error) { /* error handler */ }
+}
+</script>
+  </body>
 </html>
