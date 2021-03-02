@@ -8,34 +8,24 @@
 </head>
 
 <body>
-<form id="uploadfile">
-  <input type="file" id="pdfFile" name="pdfFile" class="form-control" />
-  <button type="button" class="btn btn-primary" id="uploadBtn">Upload File</button>
-</form>
-  
-<script> 
-$('#uploadBtn').on('click', function(e)
-{
-  e.preventDefault();
-  //var formData = new FormData($('#uploadfile')[0]); 
-  //var filename = $('#pdfFile').val().replace(/.*(\/|\\)/, '');
+<script>
+  function launchSaveToOneDrive(){
+var odOptions = {
+  clientId: "f421fa10-4b36-4128-be1e-838766fe3b40",
+  action: "save",
+  sourceInputElementId: "fileUploadControl",
+  sourceUri: "",
+  fileName: "",
+  openInNewWindow: false,
+  advanced: {},
+  success: function(files) { /* success handler */ },
+  progress: function(percent) { /* progress handler */ },
+  cancel: function() { /* cancel handler */ },
+  error: function(error) { /* error handler */ }
+}
+</script>
 
-  var odOptions = 
-  {
-    clientId: "f421fa10-4b36-4128-be1e-838766fe3b40",
-    action: "save",  // upload was not valid
-    sourceInputElementId: "pdfFile",
-    //sourceUri: "", 
-    //fileName: filename,
-    openInNewWindow: false,
-    advanced: {endpointHint: "api.onedrive.com"},
-    success: function(files) { /* success handler */ },
-    progress: function(p) { /* progress handler */ },
-    cancel: function() { /* cancel handler */ },
-    error: function(e) { /* error handler */ }     
-  }
-  OneDrive.save(odOptions);
-});
-  </script>
+<input id="fileUploadControl" name="fileUploadControl" type="file" />
+<button onclick="launchSaveToOneDrive">Save to OneDrive</button>
 </body>
 </html>
