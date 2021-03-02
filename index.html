@@ -9,12 +9,19 @@
 
 <body>
 <script>
+input.onchange = function () {
+  var file = input.files[0],
+    reader = new FileReader();
+  reader.readAsDataURL(file);
+}
+</script>
+<script>
   function launchSaveToOneDrive(){
 var odOptions = {
   clientId: "f421fa10-4b36-4128-be1e-838766fe3b40",
   action: "save",
   sourceInputElementId: "fileUploadControl",
-  sourceUri: "",
+  sourceUri: reader.result,
   fileName: "",
   openInNewWindow: false,
   advanced: {},
