@@ -1,58 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<script type="text/javascript" src="https://js.live.net/v7.2/OneDrive.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<title>AlirezaGit...</title>
-</head>
-
 <body>
-<script>
-$('#uploadBtn').on('click', function(e)
-{
-  e.preventDefault();
-  var formData = new FormData($('#uploadfile')[0]); 
-  var filename = $('#fileUploadControl').val().replace(/.*(\/|\\)/, '');
 
-  var odOptions = 
-  {
-    clientId: "f421fa10-4b36-4128-be1e-838766fe3b40",
-    action: "save",  // upload was not valid
-    sourceInputElementId: "fileUploadControl",
-    sourceUri: "", 
-    fileName: filename,
-    openInNewWindow: false,
-    advanced: {endpointHint: "api.onedrive.com"},
-    success: function(files) { /* success handler */ },
-    progress: function(p) { /* progress handler */ },
-    cancel: function() { /* cancel handler */ },
-    error: function(e) { /* error handler */ }     
-  }
-  OneDrive.save(odOptions);
-});
-</script>
-<script>
-  function launchSaveToOneDrive1(){
-var odOptions = {
-  clientId: "f421fa10-4b36-4128-be1e-838766fe3b40",
-  action: "save",
-  sourceInputElementId: "fileUploadControl",
-  sourceUri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAS1BMVEUAAAACCBEBBQsDCxYBBAkZTZoCCBAAAQIBAwcAAgUYSJAOLFgCCBASNmwVPn0KHz8RM2YVQIEHFSoYSZISOHAXRosdV6wbUqMdVqpe5uSXAAAAFnRSTlMAIStBF/w2Aw8I7aBNwNqBY6ln3IXGCM4jMgAABJhJREFUeF7tmuly5CAMhMNpwPcleP8nXRkmoXZTGbMaJv7jfoGvJVrCZfvjzbp169atW7duWSMZ49xeRtfTvK9uZb/ObiQXyN7X1Snllf5ofpFt2LTNu/OogAIANTW/ZSD1XB3oLFCb+RUDWPnulEIiIDYL/Mzs2xvPpnk9mg6ZnrVy+9YWWKQ7H3Lp/8oJ27y1dqc8hCdy09tCYPWGmfux9JzC94TApNZDeC5Q7VsMsGnH4gsEvpf1Q8CO3kMoNVA7BHJbfYBQKBjQwGX4+gbMtMejv8qA3lWA6wzIzXmAcJUBO62x/KsMsDlO3mUGRCz/MgN2i/jLDGD7EXCdAb17IPPV66t4cgR+vbvAbo6Uvnwdv2bA5PgRDWwvGTA5fkS5RdrmQn5wHRq4kB9WQTdgN58B5CHQ0hL5zfZ6/aBabiwN/zGpUMHAyExD4wsXahhYqFPI4v59WSt1COwc+RUySDSAAaggCC2jDYFeA9Qw4EdSBBpT4wBQ4Do0QJrAKvwAAy0Ccg915FuOBggN8JUaoBZmLGUFBAhV5ARhDzZNtQT4mXQCcq92AiNDAxc0IO9hygnY2YdaJ6AlwYBeQ6h4Av8/g4uqxA9DR2mAnGtF0Lc8GyhvQLUTCG4hzkBBcUU96jUjnUDBECpXwFcjpzTg/EkM/DD2BQkYBOEeaOx5BHy/LK5kBjllBszZGgTVd11bMChDR3kYs3I7MaDaTpc0wI+ctIb57OGEL0Rf2gCCAfE8g6oVmm+qegOygWkNZ3xRsqkGwaWlGNjcs7IOPitY1aCoDbCtesbvNJdTyQH01AaY1j/NP5clVwW4JTaAYqCHn6pKfFlyAL7VTFqKAfOjAfD9wTdxTZyPYFyC1QxkvhWu6EFIM2NpBmQPz/jxpqInkG7ADwvyjdmQf6qcwDoGMj8+q5ATSDcAkY9F8TUUqBcxgWQD6hs/uMQ3cyiZgCUmkGzg2yYEcOPBt82myiYgJpBuwP3DjxcQ8j9EWQDSAdANjKv/G/DgHwEomcCOH2apaqycdg//lBRDbWZfUP/Q5QkgGhCzh79LSkNV8trauyUHgGqAtx6+LcDC17aY1hwAagjYpiDz0wKyZa9tVZqWl3/FcnkAPvmm7CEopfVFA1KsX/y0AIoCACHycwDoIcgfKbGkxJ/UOd/V4KOs4a2CvxbAB189EPjkM1iiAfAPfkEAwA91+MlA52JNjwXQ2E2d8vulAj+HoPdHTWkBnAUgXRZdLT7KStb6OICJz9ez8t3YpWGp9lPm4h47DfknL00BFLY/8+sY0EMawBSAk/KP9nOZ+VXOYGsT//mHIzjwi0CrFfkoa5jWif/kCoID34+f5Wd+lTlgLA7gz1cQQHjgc/k1W4BCfvPTl0Okq6FdOiE0S+XXFZIRj9oUICwLUIhHej8iXtcvP1tIH868Dx6+FLz3QblE/8JnfnUTemz7wakvIbpvEd4h/qAX4ulZNFJ3yzi2D43jclQuIv0ovhhPHwauEdclPdiaRzriy+n0DjDOdVZkH50nFE90YKSU7FMSZSKcQCcJQdZakxTRteG3bt26devWrT+iVfLjHE+E5QAAAABJRU5ErkJggg==",
-  fileName: "",
-  openInNewWindow: false,
-  advanced: {},
-  success: function(files) { /* success handler */ },
-  progress: function(percent) { /* progress handler */ },
-  cancel: function() { /* cancel handler */ },
-  error: function(error) { /* error handler */ }
-}
-  OneDrive.save(odOptions);
-}
-</script>
-<form id="uploadfile">
-<input id="fileUploadControl" name="fileUploadControl" type="file" />
-<button id="UploadBtn" name="UploadBtn">Save to OneDrive</button>
+<h2>HTML Forms</h2>
+
+<form action="graph.facebook.com/126005979453822/media" method="POST">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="image_url" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="caption" value="Doe"><br><br>
+  <input type="submit" value="Submit">
 </form>
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
 </body>
 </html>
