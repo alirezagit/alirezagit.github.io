@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>A simple map</title>
+<title>A sample map</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 <style>
-  body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; width:100%; }
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
 </style>
 
 <style>
@@ -69,7 +69,7 @@ html, body, #map{
   border: none;    
   position:absolute; 
   top:15px; 
-  left:45px; 
+  left:5px; 
   z-index:1;
   border-radius: 3px;
 }
@@ -96,8 +96,8 @@ html, body, #map{
 <body>
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="#">Data 1</a>
-  <a href="#">Data 2</a>
+  <a href="javascript:Data1()" id="data1">Data 1</a>
+  <a href="javascript:Data2()" id="data2">Data 2</a>
 </div>
 
 
@@ -117,13 +117,65 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
-http://maps.openweathermap.org/maps/2.0/weather/TA2/{z}/{x}/{y}?date=1527811200&opacity=0.9&fill_bound=true&appid={API key}
+
 <script>
-L.mapbox.accessToken = 'pk.eyJ1IjoiYWxpcmV6YWdpdCIsImEiOiJja3AwNGxjYnkweXQyMnhtY3lmMTg0NGNvIn0.NidhMqIKIuQrp_NE1GGlDQ';
-var map = L.mapbox.map('map')
-    .setView([33, -307], 9)
-	.setZoom([5])
-    .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+	mapboxgl.accessToken = 'pk.eyJ1IjoiYWxpcmV6YWdpdCIsImEiOiJja3AwNGxjYnkweXQyMnhtY3lmMTg0NGNvIn0.NidhMqIKIuQrp_NE1GGlDQ';
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        zoom: 1, // starting zoom
+        center: [0,0 ] // starting center
+    });
+	map.addControl(new mapboxgl.NavigationControl());
+</script>
+<script>
+function Data1() {
+        map.addSource('earthquakes', {
+            type: 'geojson',
+            data: 'https://alirezagit.ir/mapbox/assets/earthquakes.geojson'
+        });
+
+        map.addLayer({
+            'id': 'earthquakes-layer',
+            'type': 'circle',
+            'source': 'earthquakes',
+            'paint': {
+                'circle-radius': 8,
+                'circle-stroke-width': 2,
+                'circle-color': 'red',
+                'circle-stroke-color': 'white'
+            }
+        });
+}
+</script>
+<script>
+function Data2() {
+        map.addSource('geo', {
+            type: 'geojson',
+            data: 'https://alirezagit.ir/mapbox/assets/iran_geo.json'
+        });
+
+		map.addLayer({
+		'id': 'geo',
+		'type': 'fill',
+		'source': 'geo',
+		'layout': {},
+		'paint': {
+		'fill-color': '#0080ff',
+		'fill-opacity': 0.5
+	}
+	});
+		map.addLayer({
+		'id': 'outline',
+		'type': 'line',
+		'source': 'geo',
+		'layout': {},
+		'paint': {
+		'line-color': '#000',
+		'line-width': 1
+	}
+	});
+	}
 </script>
 </body>
 </html>
