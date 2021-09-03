@@ -1,6 +1,6 @@
 // user details 
 const userInfo = {
- avatar: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/668895/profile/profile-512.jpg', 
+ avatar: 'https://alirezagit.ir/IMG_20210903_164547.jpg', 
  hero: 'https://wallpapercave.com/wp/YBqpqJ0.jpg', 
  website: 'https://alirezagit.ir/', 
  name: 'Alireza Soltanpour', 
